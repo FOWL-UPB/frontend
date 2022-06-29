@@ -1,0 +1,90 @@
+
+
+<body> 
+  <app-header></app-header>
+<mat-grid-list cols="12" rowHeight="74px">
+
+  <mat-grid-tile [colspan]="6" [rowspan]='10' >
+    <div class="card-config mat-elevation-z8" > 
+
+     <br>
+     <br>
+
+      <div class="mdl-in-all">
+        <button mat-flat-button routerLink="/waiting-room"  routerLinkActive="active" 
+        (click)='onClickCreateWaiting()'  class="colorButton mat-elevation-z8">CREATE GAME</button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <!--<form>-->
+      <div >
+        <mat-form-field class="example-form-field">
+          <input matInput type="text" [(ngModel)]="id">
+          <button mat-button *ngIf="id" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <button mat-flat-button routerLink="/waiting-room"  routerLinkActive="active" (click)="onClickId()" class="colorButton mat-elevation-z8" type="submit">JOIN GAME</button>
+      </div>
+     <!-- </form>-->
+    </div>
+  </mat-grid-tile>
+  <!-------------------------------------------------------->
+
+<mat-grid-tile [colspan]="6" [rowspan]='1' ></mat-grid-tile>
+<mat-grid-tile [colspan]="6" [rowspan]='1' ></mat-grid-tile>
+<mat-grid-tile [colspan]="6" [rowspan]='1' > <p class="fant">SALAS</p> </mat-grid-tile>
+
+  <!-------------------------------------------------------->
+  <mat-grid-tile [colspan]="6" [rowspan]='5' >
+
+   <div class="example-container mat-elevation-z8"> 
+      <div class="example-table-container">
+    <table cdk-table [dataSource]="dataSource" fixedLayout>
+        <!-- Name Column -->
+        <ng-container cdkColumnDef="name">
+          <th cdk-header-cell *cdkHeaderCellDef> Name </th>
+          <td cdk-cell *cdkCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Date Column -->
+        <ng-container cdkColumnDef="date">
+          <th cdk-header-cell *cdkHeaderCellDef> Date </th>
+          <td cdk-cell *cdkCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+      
+        <!-- PG/PJ Column -->
+        <ng-container cdkColumnDef="pg_pj">
+          <th cdk-header-cell *cdkHeaderCellDef> PG/PJ </th>
+          <td cdk-cell *cdkCellDef="let element"> {{element.pg_pj}} </td>
+        </ng-container>
+      
+        <!-- Level Column -->
+        <ng-container cdkColumnDef="level">
+          <th cdk-header-cell *cdkHeaderCellDef> Level </th>
+          <td cdk-cell *cdkCellDef="let element"> {{element.level}} </td>
+        </ng-container>
+      
+        <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+        <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+   </div> 
+
+  </mat-grid-tile>
+  <!---------------------------------------------->
+  <mat-grid-tile [colspan]="6" [rowspan]='1' ></mat-grid-tile>
+  <mat-grid-tile [colspan]="6" [rowspan]='1' ></mat-grid-tile>
+
+</mat-grid-list>
+</body>

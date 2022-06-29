@@ -1,0 +1,79 @@
+<app-header></app-header>
+<body class="bodyconf">
+    
+    <mat-grid-list cols="12" rowHeight="74px">
+        <mat-grid-tile [colspan]="6" [rowspan]='4' >
+            <div class="fantPlayers">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+                Players
+            </div>
+            
+                
+        </mat-grid-tile>
+    
+        <mat-grid-tile [colspan]="6" [rowspan]='4' >
+            <div>
+    
+            <div class="idconf">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                GameId:{{id}}
+            </div>
+           
+               
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="6" [rowspan]='3' >
+
+            <div class="example-container mat-elevation-z8"> 
+                <div class="example-table-container">
+            <table cdk-table [dataSource]="dataSource" fixedLayout>
+                <!-- Name Column -->
+                <ng-container cdkColumnDef="userName">
+                  <th cdk-header-cell *cdkHeaderCellDef> Name </th>
+                  <td cdk-cell *cdkCellDef="let element"> {{element.userName}} </td>
+                </ng-container>
+              
+                <!-- Level Column -->
+                <ng-container cdkColumnDef="level">
+                  <th cdk-header-cell *cdkHeaderCellDef> Level </th>
+                  <td cdk-cell *cdkCellDef="let element"> {{element.level}} </td>
+                </ng-container>
+              
+                <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+                <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+        </div>
+        </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="6" [rowspan]='1' >
+            <div class="shareConf">
+                Share with your frineds
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="6" [rowspan]='1' >
+            <div class="mdl-in-all mat-elevation-z8">
+                <button mat-button class= "sizeandcolor">START</button>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="12" [rowspan]='2'></mat-grid-tile>
+    </mat-grid-list>
+</body>

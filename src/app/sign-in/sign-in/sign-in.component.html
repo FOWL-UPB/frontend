@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+<p>sign-in works!</p>
+=======
+<div class="main-div">
+     <mat-card class="example-card" style="text-align: center;">
+        <mat-card-header >
+          <mat-card-title  >Fowl</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://s1.eestatic.com/2019/11/18/como/como_hacer_445466487_138283315_1706x960.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Email" [(ngModel)]="userDto.email" name="username" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+              <td><mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" [(ngModel)]="userDto.password" type="password" name="password" required>
+              </mat-form-field></td>
+            </tr></table>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="asdf()" color="primary">Login</button>
+        </mat-card-actions>
+        <a (click)="signup()">Create new account</a>
+      </mat-card>
+>>>>>>> 6fec1a6626677549ffaae9c11790bdb8aa3c02ae

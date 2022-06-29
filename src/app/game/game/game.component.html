@@ -1,0 +1,100 @@
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"/>
+
+    <style>
+      .boxscroll {
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 15px;
+        width: 100%;
+        overflow: auto;
+        border: 1px solid rgb(116, 1, 1);
+      }
+      .flexContainer {
+        display: flex;
+        width:100%;
+      }
+
+      .inputField {
+          flex: 1;
+      }
+      
+    </style>
+
+</head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- Chat + Movelist + Controls -->
+      <div class="row ">
+        <div class="col-4" style="border:solid;background-color:grey">
+          <div class="container" >
+            <div class="row">
+              <!-- Player Turn + Button Col -->
+              <div class="col" >
+                <!-- Player Turn -->
+                <div class="row">
+                    <h3>Player Turn:</h3>
+                    <div id="playturn"></div>                  
+                </div>
+              <hr/>
+                <!-- Buttons -->
+                <button class="btn btn-block btn-danger" style="font-size:90%">Leave Game</button>
+                <button class="btn btn-block btn-primary" style="font-size:90%">Forfeit Game</button>
+                <hr/>
+              </div>
+              <!-- Movelist Col -->
+              <div class="col">
+                  <h3>Move List:</h3>
+                <div class="row" style="height:100%">
+                <div id="pgn" class="boxscroll" style="height:46vh; width: 100%; margin-left:10px"></div>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <hr/>
+          <!-- Chat -->
+          <div class="col">
+            <div class="row">
+              <div id="show_comments" class="boxscroll" style="height: 35vh"></div>
+              <div id="comment-box"></div>
+              <div class="flexContainer">
+                <input id="comment" placeholder="Message" class="inputField" style="margin-top:10px">
+                <button mat-mini-fab color="primary">
+                    <mat-icon>send</mat-icon>
+                </button>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <!-- Chessboard -->
+        <div class="col-8 ml-auto">
+            <div class="row">
+                <ng2-chessboard #board 
+                    [(position)]="position" 
+                    [orientation]="orientation" 
+                    [showNotation]="showNotation" 
+                    [draggable]="draggable" 
+                    [animation]="animation">
+                </ng2-chessboard>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+<!--<button (click)="board.move('e2-e4')">Play e2-e4</button>
+<button (click)="position = '8/8/4k3/R7/2K5/8/8/8 w -- 1-0'">Change</button>
+<button (click)="position = 'start'">Reset</button>
+<input type="radio" [(ngModel)]="orientation" [value]="true"> White
+<input type="radio" [(ngModel)]="orientation" [value]="false"> Black
+<input type="checkbox" [(ngModel)]="showNotation"/> Notation
+<input type="checkbox" [(ngModel)]="draggable"/> Draggable
+<input type="checkbox" [(ngModel)]="animation"/> Animation-->

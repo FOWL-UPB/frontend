@@ -1,0 +1,43 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  mat-card::ng-deep.mat-card-header-text {
+    width: 100%;
+    color:darkcyan;
+    
+  }
+  .mat-card-header .mat-card-title {
+    margin-bottom: 50px;
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 60px;
+}
+
+  .main-div{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+
+  .example-card {
+    max-width: 400px;
+  }
+
+  .example-header-image {
+    background-image: url('https://s1.eestatic.com/2019/11/18/como/como_hacer_445466487_138283315_1706x960.jpg');
+    background-size: cover;
+  }

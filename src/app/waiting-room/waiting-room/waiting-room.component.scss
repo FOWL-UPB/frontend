@@ -1,0 +1,117 @@
+.bodyconf {
+    background-color: rgb(223, 223, 223);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.sizeandcolor{
+    background-color: #2E7AA4 ;
+    color: white;
+    width: 250px;
+    height: 65px;
+    font-size: 30px;
+}
+
+.fantPlayers {
+    font-family: new times roman;
+    font-size: 75px;
+    color: #3e6b99 ;
+}
+
+.idconf{
+    font-family: new times roman;
+    font-size: 60px;
+}
+.shareConf{
+    font-family: new times roman;
+    font-size: 30px;
+    color: #3e6b99 ;
+}
+
+
+.mdl-in-all{
+    position: relative;
+}
+
+.card-config{
+    position: relative;
+    height: 600px;
+    width: 450px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.card {
+    width: 400px;
+    height: 500px;
+  }
+  
+  .example-form-field {
+    width: 200px;
+  }
+
+  /* Structure */
+.example-container {
+    position: relative;
+    min-height: 100px;
+    width: 500px;
+  }
+  
+  .example-table-container {
+    position: relative;
+    height: 100px;
+    overflow: auto;
+    background-color: white;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .example-loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-rate-limit-reached {
+    color: #980000;
+    max-width: 360px;
+    text-align: center;
+  }
+  
+  /* Column Widths */
+  .mat-column-number,
+  .mat-column-state {
+    max-width: 64px;
+  }
+  
+  .mat-column-created {
+    max-width: 124px;
+  }
+  
+  .example-viewport {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+  }
+  
+  .example-item-detail {
+    height: 18px;
+  }
+  
+  .example-alternate {
+    background: rgba(127, 127, 127, 0.3);
+  }
+  
+    

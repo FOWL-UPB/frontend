@@ -1,0 +1,21 @@
+<mat-grid-list cols="20" rowHeight="45px">
+    <mat-grid-tile [colspan]="2" [rowspan]='1'>
+        <div >
+            <img class ='sizeImage' src='./assets/icon.png'>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="15" [rowspan]='1'>
+    
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]='1'>
+        <div class="al_rg">
+            <img class ='sizeImageDefault' src="./assets/iconDefault.png">
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]='1'>
+        <div class="al_rg">
+            <div>{{value}}</div>
+        </div>
+    </mat-grid-tile>
+    
+</mat-grid-list>
